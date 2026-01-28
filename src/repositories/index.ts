@@ -1,3 +1,4 @@
+import CrudRepository from "./crud-repository.js";
 import UserRepository from "./user-repository.js";
 
-export { UserRepository };
+export { CrudRepository, UserRepository };

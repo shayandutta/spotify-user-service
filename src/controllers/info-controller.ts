@@ -1,16 +1,17 @@
 import { StatusCodes } from "http-status-codes";
+import tryCatch from "../utils/TryCatch.js";
 
-const info = (
-  _req: import("express").Request,
-  res: import("express").Response,
-) => {
-  return res.status(StatusCodes.OK).json({
+
+const info = tryCatch(async(req, res)=> {
+  return res
+  .status(StatusCodes.OK)
+  .json({
     success: true,
-    message: "User service is live",
+    message: 'API-Gateway is live',
     error: {},
-    data: {},
-  });
-};
+    data: {}
+})
+})
 
 export default {
   info,
